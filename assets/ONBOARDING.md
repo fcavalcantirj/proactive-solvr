@@ -12,7 +12,7 @@
 ### Completion by Level
 - **Simple:** 0/8
 - **Intermediate:** 0/12  
-- **Advanced:** 0/20
+- **Advanced:** 0/15
 
 ---
 
@@ -130,6 +130,16 @@ When your agent sees this file with `state: not_started` or `in_progress`, it of
 **Set up web search API? (Brave free tier / OpenRouter / skip)**
 > 
 
+### 13. RPC Adapters
+**Want to connect additional messaging platforms?**
+> 
+
+*Options:*
+- `signal` — Signal via signal-cli (requires number)
+- `imessage` — iMessage integration (Mac only)
+- `both` — Set up both
+- `skip` — Not now
+
 ---
 
 ## Completion Log
@@ -150,6 +160,7 @@ When your agent sees this file with `state: not_started` or `in_progress`, it of
 | 12 | Thinking level | advanced | ❌ |
 | 13 | Reasoning | advanced | ❌ |
 | 14 | Web search | advanced | ❌ |
+| 15 | RPC adapters | advanced | ❌ |
 
 ---
 

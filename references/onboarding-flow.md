@@ -64,12 +64,13 @@ TechLevel = intermediate (12 questions, ~8 min)
 ├── Voice wake
 └── DONE
 
-TechLevel = advanced (20 questions, ~15 min)
+TechLevel = advanced (15 questions, ~12 min)
 ├── All of intermediate
 ├── Webhooks (Zapier, n8n)
 ├── Thinking level
 ├── Reasoning visibility
 ├── Web search API
+├── RPC adapters (Signal-cli, iMessage)
 └── DONE
 ```
 
@@ -107,7 +108,19 @@ Set it up now, or skip?"
 
 ### Advanced Level — Full technical
 
-Include all details: webhooks, API endpoints, thinking levels, etc.
+Include all details: webhooks, API endpoints, thinking levels, RPC adapters.
+
+**RPC Adapters:**
+```
+"Want to connect Signal or iMessage?
+
+- Signal-cli lets me receive/send Signal messages (needs phone number)
+- iMessage integration works on Mac
+
+These are optional — most people just use Telegram/Discord.
+
+Set up Signal, iMessage, both, or skip?"
+```
 
 ---
 
@@ -223,6 +236,7 @@ Ready when you are."
 - Thinking: [level]
 - Reasoning: [on/off]
 - Web search: [provider]
+- RPC adapters: [Signal/iMessage/none]
 
 All systems go. What's first?"
 ```

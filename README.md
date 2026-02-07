@@ -53,7 +53,7 @@ First question: "How technical are you?"
 |-------|-----------|------|----------|
 | **Simple** | 8 | ~5 min | Core setup only |
 | **Intermediate** | 12 | ~8 min | + Solvr, voice wake |
-| **Advanced** | 20 | ~15 min | + webhooks, API config, thinking levels |
+| **Advanced** | 15 | ~12 min | + webhooks, RPC adapters, thinking levels |
 
 Non-technical users never see API keys or webhook config. Power users get everything.
 
