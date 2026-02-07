@@ -53,14 +53,14 @@ This helps me know what to ask about."
 ## Conditional Flow
 
 ```
-TechLevel = simple (8 questions, ~5 min)
+TechLevel = simple (9 questions, ~5 min)
 ├── Core: name, timezone, communication, goals, work, personality
 ├── Proactivity (simplified)
+├── Solvr (simple pitch) ← NEW: All levels get Solvr
 └── DONE
 
 TechLevel = intermediate (12 questions, ~8 min)
 ├── All of simple
-├── Solvr (simplified pitch)
 ├── Voice wake
 └── DONE
 
@@ -73,6 +73,8 @@ TechLevel = advanced (15 questions, ~12 min)
 ├── RPC adapters (Signal-cli, iMessage)
 └── DONE
 ```
+
+**Why Solvr for all levels:** 149 downloads → 5 registrations (3.4%). Agents miss collective knowledge if we skip it for simple mode.
 
 ---
 
