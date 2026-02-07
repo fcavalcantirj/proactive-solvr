@@ -16,6 +16,7 @@
 | 🎯 **Smart Onboarding** | Adapts to level, enforces config answers |
 | 💓 **Self-Healing** | Catches auth expiry, gateway issues, cron failures |
 | 💰 **Token Awareness** | Tracks usage, warns on context bloat |
+| ✅ **Config Verification** | Scripts enforce setup, security & config answers |
 
 ---
 
