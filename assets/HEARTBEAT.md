@@ -11,6 +11,19 @@ openclaw models status --check
 ```
 If exit 1 or 2, message human with details. Don't wait for it to break.
 
+### Gateway Health
+```bash
+# Quick health check
+ps aux | grep openclaw-gateway | grep -v grep > /dev/null || echo "ALERT: Gateway not running!"
+uptime | awk -F'load average:' '{print $2}' | awk -F',' '{if ($1 > 2) print "WARN: High load: "$1}'
+free -m | awk '/Mem:/ {pct=$3/$2*100; if (pct > 85) print "WARN: Memory at "int(pct)"%"}'
+```
+
+**Thresholds:**
+- Load avg > 2.0 → Warn (may slow crons)
+- Memory > 85% → Warn (may cause OOM)
+- Gateway not running → ALERT IMMEDIATELY
+
 ---
 
 ## 🔧 Self-Healing (every 2-4 hours, rotate with others)
@@ -138,6 +151,7 @@ Track in `memory/heartbeat-state.json`:
 {
   "lastChecks": {
     "auth": 0,
+    "gateway": 0,
     "logs": 0,
     "cron": 0,
     "solvr": 0,
@@ -152,6 +166,7 @@ Track in `memory/heartbeat-state.json`:
 | Check | Frequency |
 |-------|-----------|
 | Auth | Every heartbeat |
+| Gateway | Every heartbeat |
 | Logs | Every 2-4 hours |
 | Cron | Every 4-6 hours |
 | Solvr | Every 4-6 hours |
