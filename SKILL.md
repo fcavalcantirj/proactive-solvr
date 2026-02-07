@@ -1,3 +1,8 @@
+---
+name: proactive-solvr
+description: Transform your AI agent into a proactive partner with soul persistence, collective knowledge via Solvr, self-healing heartbeats, and config enforcement scripts.
+---
+
 # Proactive Solvr Agent
 
 > Transform your AI agent from task-follower into proactive partner.
