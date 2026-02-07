@@ -42,6 +42,8 @@ First question: *"How technical are you?"*
 
 Non-technical users never see API keys or webhook config.
 
+**Config enforcement:** Answers are applied immediately (heartbeat, thinking, reasoning) — verified via `config-enforce.sh`.
+
 ---
 
 ## 🧠 Soul Persistence
@@ -280,6 +282,7 @@ curl -X POST http://localhost:18789/hooks/agent \
 |------|---------|
 | `onboarding-check.sh` | Verify setup consistency |
 | `security-audit.sh` | Security posture check |
+| `config-enforce.sh` | Ensure onboarding answers are applied |
 
 ---
 
@@ -307,6 +310,10 @@ OpenClaw integrates external CLIs via JSON-RPC for messaging channels:
 ```bash
 # Check onboarding consistency
 ./scripts/onboarding-check.sh
+
+# Ensure config matches onboarding answers
+./scripts/config-enforce.sh        # check only
+./scripts/config-enforce.sh --fix  # auto-apply
 
 # Security audit
 ./scripts/security-audit.sh
