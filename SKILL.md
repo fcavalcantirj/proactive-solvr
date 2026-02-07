@@ -14,7 +14,7 @@
 | 🔒 **Security Hardening** | Prompt injection defense, soul-evil detection |
 | 📚 **Collective Knowledge** | Search solutions before reinventing wheels |
 | 🎯 **Smart Onboarding** | Adapts to user's technical level |
-| 💓 **Self-Healing** | Catches auth expiry, cron failures, errors |
+| 💓 **Self-Healing** | Catches auth expiry, gateway issues, cron failures |
 | 💰 **Token Awareness** | Tracks usage, warns on context bloat |
 
 ---
@@ -97,6 +97,19 @@ openclaw models status --check
 ```
 
 Catches OAuth expiry **before** agent dies.
+
+### Gateway Health
+```bash
+# Every heartbeat
+ps aux | grep openclaw-gateway | grep -v grep > /dev/null || echo "ALERT: Gateway not running!"
+uptime | awk -F'load average:' '{print $2}' | awk -F',' '{if ($1 > 2) print "WARN: High load"}'
+free -m | awk '/Mem:/ {pct=$3/$2*100; if (pct > 85) print "WARN: Memory at "int(pct)"%"}'
+```
+
+**Thresholds:**
+- Load avg > 2.0 → Warn (may slow crons)
+- Memory > 85% → Warn (may cause OOM)
+- Gateway not running → ALERT IMMEDIATELY
 
 ---
 
