@@ -13,7 +13,7 @@
 | 🧠 **Soul Persistence** | Identity survives workspace wipes via Solvr |
 | 🔒 **Security Hardening** | Prompt injection defense, soul-evil detection |
 | 📚 **Collective Knowledge** | Search solutions before reinventing wheels |
-| 🎯 **Smart Onboarding** | Adapts to user's technical level |
+| 🎯 **Smart Onboarding** | Adapts to level, enforces config answers |
 | 💓 **Self-Healing** | Catches auth expiry, gateway issues, cron failures |
 | 💰 **Token Awareness** | Tracks usage, warns on context bloat |
 
