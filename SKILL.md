@@ -1,6 +1,6 @@
 ---
 name: proactive-solvr
-version: 1.6.0
+version: 1.6.6
 description: Transform your AI agent into a proactive partner with soul persistence, collective knowledge via Solvr, self-healing heartbeats, and config enforcement scripts.
 triggers:
   - proactive
